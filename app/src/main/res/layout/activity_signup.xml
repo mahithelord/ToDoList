@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signupVM" type="com.thesapplication.app.modules.signup.data.viewmodel.SignupVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearAppBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <FrameLayout android:id="@+id/frameBack"
+                    android:layout_height="@dimen/_60pxv"
+                    android:layout_width="@dimen/_67pxh" style="@style/groupStylegray_50_63cornerRadius">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_6pxh"
+                        android:layout_width="@dimen/_4pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPersonality"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{signupVM.signupModel.txtPersonality}"
+                    style="@style/txtPoppinssemibold18" tools:text="@string/lbl_sign_up"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSignUp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:id="@+id/txtWhencommunity"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:text="@{signupVM.signupModel.txtWhencommunity}"
+                    style="@style/txtPoppinsbold34" tools:text="@string/msg_when_community"/>
+                <TextView android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:text="@{signupVM.signupModel.txtDuration}"
+                    style="@style/txtPoppinsregular12_1" tools:text="@string/msg_our_community_i3"/>
+                <ImageView android:id="@+id/imageLogo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_120pxh"
+                    android:layout_width="@dimen/_114pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_logo_120X114"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_logo_120X114"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_gray_900_63_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_first_name2"
+                    android:id="@+id/etFirstname"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_28pxh"
+                    android:paddingTop="@dimen/_22pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etFirstnameValue}"
+                    android:textColor="@color/gray_900_7e"
+                    android:textColorHint="@color/gray_900_7e"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_gray_900_63_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_last_name2"
+                    android:id="@+id/etLastname"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_22pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_23pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etLastnameValue}"
+                    android:textColor="@color/gray_900_7e"
+                    android:textColorHint="@color/gray_900_7e"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_gray_900_63_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_e_mail2"
+                    android:id="@+id/etEmail" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_22pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etEmailValue}"
+                    android:textColor="@color/gray_900_7e"
+                    android:textColorHint="@color/gray_900_7e"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_gray_900_63_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_password"
+                    android:id="@+id/etPassword"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_22pxv"
+                    android:singleLine="true"
+                    android:text="@={signupVM.signupModel.etPasswordValue}"
+                    android:textColor="@color/gray_900_7e"
+                    android:textColorHint="@color/gray_900_7e"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+                <TextView android:id="@+id/txtLoremipsumdol"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:text="@{signupVM.signupModel.txtLoremipsumdol}"
+                    style="@style/txtPoppinsmedium12" tools:text="@string/msg_lorem_ipsum_dol"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_light_blue_400_radius_14"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center" android:id="@+id/btnNext"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_23pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_A700"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_next"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearAlreadyhavean"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtConfirmation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{signupVM.signupModel.txtConfirmation}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_already_have_an"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLogin"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="@dimen/_1pxh"
+                        android:singleLine="true"
+                        android:text="@{signupVM.signupModel.txtLogin}"
+                        style="@style/txtPoppinssemibold12" tools:text="@string/lbl_login"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="workTodayVM" type="com.thesapplication.app.modules.worktoday.data.viewmodel.WorkTodayVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearWorkToday"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <FrameLayout android:id="@+id/frameBack"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_67pxh" style="@style/groupStylegray_50_63cornerRadius">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_6pxh"
+                android:layout_width="@dimen/_4pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtMakeawishlis"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{workTodayVM.workTodayModel.txtMakeawishlis}"
+            style="@style/txtPoppinssemibold28" tools:text="@string/lbl_work_today_s"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtMakeyourjobe"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{workTodayVM.workTodayModel.txtMakeyourjobe}"
+            style="@style/txtPoppinsmedium12" tools:text="@string/msg_make_your_job_e"/>
+        <LinearLayout android:id="@+id/linearRowtoday"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearDate"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtToday"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{workTodayVM.workTodayModel.txtToday}"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_today"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDate"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{workTodayVM.workTodayModel.txtDate}"
+                    style="@style/txtPoppinssemibold16" tools:text="@string/lbl_02_april_2021"/>
+            </LinearLayout>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_teal_400_5e_radius_14"
+                android:id="@+id/btnCalendar"
+                android:layout_height="@dimen/_58pxh"
+                android:layout_width="@dimen/_60pxh"
+                android:paddingHorizontal="@dimen/_19pxh"
+                android:paddingVertical="@dimen/_19pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_calendar" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearTodowork"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylewhite_A700_7e">
+            <View
+                android:background="@drawable/rectangle_bg_deep_orange_500_6c_radius_6"
+                android:id="@+id/viewStatuscolor"
+                android:layout_height="@dimen/_26pxh" android:layout_width="@dimen/_28pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtResearchProduc"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{workTodayVM.workTodayModel.txtResearchProduc}"
+                style="@style/txtPoppinsregular14" tools:text="@string/msg_research_produc"/>
+            <ImageView android:id="@+id/imageArrowright"
+                android:layout_height="@dimen/_5pxh"
+                android:layout_width="@dimen/_3pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearTodowork1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylewhite_A700_7e">
+            <LinearLayout android:id="@+id/linearRowstatuscolorOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <View
+                    android:background="@drawable/rectangle_bg_deep_orange_500_6c_radius_6"
+                    android:id="@+id/viewStatuscolorOne"
+                    android:layout_height="@dimen/_26pxh" android:layout_width="@dimen/_28pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtResearchProducOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{workTodayVM.workTodayModel.txtResearchProducOne}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/msg_create_action_p"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightOne"
+                android:layout_height="@dimen/_5pxh"
+                android:layout_width="@dimen/_3pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_light_blue_400_radius_14"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:id="@+id/btnMakeAWishListOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_311pxh"
+            android:paddingBottom="@dimen/_22pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_22pxv" android:singleLine="true"
+            android:text="@string/msg_make_a_wish_lis"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/msg_make_a_wish_lis"/>
+    </LinearLayout>
+</layout>

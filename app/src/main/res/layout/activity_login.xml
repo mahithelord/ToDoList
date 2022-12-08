@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="loginVM" type="com.thesapplication.app.modules.login.data.viewmodel.LoginVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearAppBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <FrameLayout android:id="@+id/frameBack"
+                    android:layout_height="@dimen/_60pxv"
+                    android:layout_width="@dimen/_72pxh" style="@style/groupStylegray_50_63cornerRadius">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_6pxh"
+                        android:layout_width="@dimen/_4pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPersonality"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{loginVM.loginModel.txtPersonality}"
+                    style="@style/txtPoppinssemibold18" tools:text="@string/lbl_login"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearLogin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <TextView android:id="@+id/txtThisisyourco"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:text="@{loginVM.loginModel.txtThisisyourco}"
+                style="@style/txtPoppinsbold34" tools:text="@string/msg_this_is_your_co"/>
+            <TextView android:id="@+id/txtOurcommunityi"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{loginVM.loginModel.txtOurcommunityi}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/msg_our_community_i2"/>
+            <ImageView android:id="@+id/imageLogo"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_113pxh"
+                android:layout_width="@dimen/_116pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_logo_113X116"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_logo_113X116"/>
+            <EditText
+                android:background="@drawable/rectangle_border_gray_900_63_radius_14"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/lbl_email"
+                android:id="@+id/etEmail" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_23pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_22pxv"
+                android:singleLine="true"
+                android:text="@={loginVM.loginModel.etEmailValue}"
+                android:textColor="@color/gray_900_7e"
+                android:textColorHint="@color/gray_900_7e"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_border_gray_900_63_radius_14"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/lbl_password"
+                android:id="@+id/etPassword" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_23pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_22pxv"
+                android:singleLine="true"
+                android:text="@={loginVM.loginModel.etPasswordValue}"
+                android:textColor="@color/gray_900_7e"
+                android:textColorHint="@color/gray_900_7e"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtForgotPasswor"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{loginVM.loginModel.txtForgotPasswor}"
+                style="@style/txtPoppinssemibold12" tools:text="@string/msg_forgot_password"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_light_blue_400_radius_14"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnNext"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_23pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_23pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_next"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_next"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearDonthaveana"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtConfirmation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{loginVM.loginModel.txtConfirmation}"
+                    style="@style/txtPoppinsmedium12" tools:text="@string/msg_don_t_have_an_a"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignUp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{loginVM.loginModel.txtSignUp}"
+                    style="@style/txtPoppinssemibold12" tools:text="@string/lbl_signup2"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
