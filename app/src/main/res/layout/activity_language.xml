@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="languageVM" type="com.thesapplication.app.modules.language.data.viewmodel.LanguageVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearLanguage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageButton
+            android:background="@drawable/rectangle_border_gray_900_63_radius_14"
+            android:id="@+id/btnArrowleft"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_width="@dimen/_60pxh"
+            android:paddingHorizontal="@dimen/_26pxh"
+            android:paddingVertical="@dimen/_26pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_arrowleft_gray_900" tools:ignore="ContentDescription"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtLanguage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{languageVM.languageModel.txtLanguage}"
+            style="@style/txtPoppinssemibold28" tools:text="@string/lbl_language"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtYoursettingss"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{languageVM.languageModel.txtYoursettingss}"
+            style="@style/txtPoppinsmedium12" tools:text="@string/msg_your_settings_s"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_deep_orange_500_5e_radius_14"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnIndonesian"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_311pxh"
+            android:paddingBottom="@dimen/_24pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_24pxv" android:singleLine="true"
+            android:text="@string/lbl_indonesian"
+            android:textAllCaps="false"
+            android:textColor="@color/deep_orange_500"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_12pxh" android:textStyle="bold" tools:text="@string/lbl_indonesian"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_deep_purple_a400_5e_radius_14"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnEnglish"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_311pxh"
+            android:paddingBottom="@dimen/_22pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_22pxv" android:singleLine="true"
+            android:text="@string/lbl_english"
+            android:textAllCaps="false"
+            android:textColor="@color/deep_purple_A400"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_12pxh" android:textStyle="bold" tools:text="@string/lbl_english"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_light_blue_400_radius_14"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnSave"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_311pxh"
+            android:paddingBottom="@dimen/_22pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_22pxv" android:singleLine="true"
+            android:text="@string/lbl_save" android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_save"/>
+    </LinearLayout>
+</layout>

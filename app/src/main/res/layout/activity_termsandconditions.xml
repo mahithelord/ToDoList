@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="termsandconditionsVM" type="com.thesapplication.app.modules.termsandconditions.data.viewmodel.TermsandconditionsVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageButton
+            android:background="@drawable/rectangle_border_gray_900_63_radius_14"
+            android:id="@+id/btnArrowleft"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_width="@dimen/_60pxh"
+            android:paddingHorizontal="@dimen/_26pxh"
+            android:paddingVertical="@dimen/_26pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_arrowleft_gray_900" tools:ignore="ContentDescription"/>
+        <TextView android:id="@+id/txtTermAndCondition"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_10pxh"
+            android:text="@{termsandconditionsVM.termsandconditionsModel.txtTermAndCondition}"
+            style="@style/txtPoppinssemibold28" tools:text="@string/msg_terms_and_condi"/>
+        <TextView android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_12pxh"
+            android:text="@{termsandconditionsVM.termsandconditionsModel.txtDescription}"
+            style="@style/txtPoppinsregular12_2" tools:text="@string/msg_lorem_ipsum_dol2"/>
+    </LinearLayout>
+</layout>

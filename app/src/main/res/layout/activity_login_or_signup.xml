@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="loginOrSignupVM" type="com.thesapplication.app.modules.loginorsignup.data.viewmodel.LoginOrSignupVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLoginorSignUp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <FrameLayout android:id="@+id/frameBack"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_67pxh" style="@style/groupStylegray_50_63cornerRadius">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_6pxh"
+                android:layout_width="@dimen/_4pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        </FrameLayout>
+        <TextView android:gravity="start"
+            android:id="@+id/txtWelcometoour"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@{loginOrSignupVM.loginOrSignupModel.txtWelcometoour}"
+            style="@style/txtPoppinsbold34" tools:text="@string/msg_welcome_to_our"/>
+        <TextView android:gravity="start"
+            android:id="@+id/txtOurcommunityi"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:text="@{loginOrSignupVM.loginOrSignupModel.txtOurcommunityi}"
+            style="@style/txtPoppinsregular12" tools:text="@string/msg_our_community_i"/>
+        <ImageView android:id="@+id/imageLogo"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_105pxh"
+            android:layout_width="@dimen/_117pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_logo_105X117"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_logo_105X117"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtGetinthrough"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{loginOrSignupVM.loginOrSignupModel.txtGetinthrough}"
+            style="@style/txtPoppinssemibold18" tools:text="@string/lbl_get_in_through"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_light_blue_400_radius_14"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnSignUp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_311pxh"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@string/lbl_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_sign_up"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_deep_orange_500_63_radius_14"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnLogin"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_60pxv"
+            android:layout_width="@dimen/_311pxh"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@string/lbl_login" android:textAllCaps="false"
+            android:textColor="@color/deep_orange_500"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_login"/>
+    </LinearLayout>
+</layout>
